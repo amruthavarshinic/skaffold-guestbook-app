@@ -1,0 +1,13 @@
+apiVersion: skaffold/v2beta28
+kind: Config
+metadata:
+  name: skaffold-example
+deploy:
+  kubectl:
+    manifests:
+    - frontend-deployment.yaml
+    - frontend-tcp-service.yaml
+    - redis-master-deployment.yaml
+    - redis-master-service.yaml
+    - redis-slave-deployment.yaml
+    - redis-slave-service.yaml
